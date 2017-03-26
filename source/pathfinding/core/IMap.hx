@@ -10,8 +10,8 @@ import pathfinding.core.Node;
  */
 interface IMap
 {
-	public var COST:Int = 1;
-	public var nodes:Array<Node>;
+	public var cost(get,null):Int;
+	public var nodes(get,null):Array<Node>;
 
 	public function addNode(node:Node):Node;
     public function heuristic(node1:Node, node2:Node):Float;

@@ -53,7 +53,7 @@ class AStar
  
 				// get the distance between current node and the neighbor
 				// and calculate the next g score
-				nextG = current.g + map.COST;
+				nextG = current.g + map.cost;
  
 				var contains:Bool = openList.indexOf(neighbor) != -1;
                 

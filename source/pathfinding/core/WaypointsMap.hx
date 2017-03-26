@@ -5,9 +5,9 @@ import pathfinding.core.Heuristic;
 
 class WaypointsMap implements IMap
 {
-	public var COST:Int = 10;
+	public var cost(get,null):Int = 10;
 
-	public var nodes:Array<Node>;
+	public var nodes(get,null):Array<Node>;
 
 	public function new()
 	{
@@ -29,5 +29,15 @@ class WaypointsMap implements IMap
 	public function getNeighbors(node:Node):Array<Node>
 	{
 		return [for (node in node.neighbors) if (node.walkable) node];
+	}
+	
+	function get_cost():Int 
+	{
+		return cost;
+	}
+	
+	function get_nodes():Array<Node> 
+	{
+		return nodes;
 	}
 }
