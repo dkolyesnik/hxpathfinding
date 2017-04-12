@@ -64,6 +64,7 @@ class AStar
                     if (nextG < neighbor.g) 
                     {
                         neighbor.g = nextG;
+						neighbor.f = neighbor.g + neighbor.h;
 					    neighbor.parent = current;
                     }
                 }
