@@ -25,10 +25,7 @@ class Pathfinding
 
 	public function findPath(start:Node, goal:Node):Path 
 	{
-		if (start.walkable && goal.walkable)
-			return aStar.search(start, goal, map);
-		else
-			return Path.INVALID;
+		return aStar.search(start, goal, map);
 	}
 
 	/**

@@ -102,7 +102,11 @@ class GridMap implements IMap
 
 	public function getNode(x:Int, y:Int):Node
 	{
-		return nodes[width * y + x];
+		var i = width * y + x;
+		if(i < nodes.length)
+			return nodes[i];
+		else
+			return null;
 	}
 
 	/**
