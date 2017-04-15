@@ -45,4 +45,11 @@ class Node
 	{
 		return neighbors.length > 0;	
 	}
+	
+	public function reset():Void{
+		g = 0;
+		f = 0;
+		h = 0;
+		parent = null;
+	}
 }

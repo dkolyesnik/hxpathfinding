@@ -25,7 +25,17 @@ class Pathfinding
 
 	public function findPath(start:Node, goal:Node):Path 
 	{
-		return aStar.search(start, goal, map);
+		if(start != null && goal != null && start.walkable && goal.walkable)
+		{
+			var path = aStar.search(start, goal, map);
+			for (n in map.nodes)
+				n.reset();
+			return path;
+		}
+		else 
+		{
+			return Path.INVALID;
+		}
 	}
 
 	/**
